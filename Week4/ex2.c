@@ -47,6 +47,7 @@ void swap(int *a, int *b) {
 void bubbleSort(int *array, int n, int *steps) {
     for(int i = 0; i  < n - 1; i++) {
         for(int j = 0; j < n - 1 - i; j++) {
+            (*steps)++;
             if(array[j] > array[j + 1]) {
                 (*steps)++; // Đếm số bước sắp xếp
                 swap(&array[j], &array[j + 1]);
