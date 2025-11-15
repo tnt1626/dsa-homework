@@ -15,7 +15,7 @@ void ascendingIntegers(int n, int *comps) {
     *comps = 0;
     while(n >= 10) {
         int num1 = n % 10;
-        int num2 = n % 100;
+        int num2 = (n / 10) % 10;
         (*comps)++;
         if(num2 > num1) {
             return;
