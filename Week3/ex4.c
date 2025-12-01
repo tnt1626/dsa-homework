@@ -3,6 +3,14 @@
 #include <time.h>
 #define N 100
 
+void printArray(int array[], int n) {
+    printf("Array: ");
+    for(int i = 0; i < n; i++) {
+        printf("%5d", array[i]);
+    }
+    printf("\n");
+}
+
 void initializeArray(int *array, int n) {
     for(int i = 0; i < n; i++) {
         array[i] = 1998 + rand() % 26;
@@ -59,7 +67,6 @@ void bubbleSort(int *array, int n, int *swaps) {
 }
 
 int caseA(int *array, int *n, int k) {
-    initializeArray(array, *n);
     int assignment, result = 0;
     int i = 0;
     while(i < *n) {
@@ -71,34 +78,41 @@ int caseA(int *array, int *n, int k) {
             i++;
         }
     }   
+    // printArray(array, *n);
     return result;
 }
 
 int caseB(int *array, int *n, int k) {
-    initializeArray(array, *n);
     int result = 0, swaps;
     bubbleSort(array, *n, &swaps);
     result += swaps;
     int index = -1;
     for(int i = 0; i < *n; i++) {
-        if(array[i] > k) {
+        if(array[i] >= k) {
             index = i;
             break;
         }
     }
     *n = index;
+    // printArray(array, *n);
     return result;
 }
 
 int main() {
     srand(time(NULL));
 
-    int array[N];
-    int n = 100;
+    int array1[N];
+    int n1 = 100;
+    initializeArray(array1, n1);
+    int array2[N];
+    for(int i = 0; i < n1; i++) {
+        array2[i] = array1[i];
+    }
+    int n2 = n1;
     int k = 2016;
-
-    int stepsA = caseA(array, &n, k);
-    int stepsB = caseB(array, &n, k);
+    // printArray(array1, n1);
+    int stepsA = caseA(array1, &n1, k);
+    int stepsB = caseB(array2, &n2, k);
     printf("Steps of case A: %4d\n", stepsA);
     printf("Steps of case B: %4d\n", stepsB);
     return 0;
