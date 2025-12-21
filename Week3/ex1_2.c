@@ -44,14 +44,14 @@ int main() {
             minIndex(array, n, &assignment);
             frequency[assignment]++;
         }
-        printf("assignment:    ");
+        printf("%-10s","assignment: ");
         for(int k = 0; k <= n; k++) {
-            printf("%6d", k);
+            printf("%-6d", k);
         }
         printf("\n");
-        printf("frequency: ");
+        printf("%-10s","frequency:  ");
         for(int k = 0; k <= n; k++) {
-            printf("%6d", frequency[k]);
+            printf("%-6d", frequency[k]);
         }
         printf("\n");
         printf("mean: %.3f\n\n", average(frequency, n, round[i]));

@@ -41,15 +41,15 @@ int main() {
     int n = 40;
     int comparision;
     initializeArray(array, n);
-    for(int i = 0; i < n; i++) {
-        printf("%.2f ", array[i]);
-    }
-    printf("\n");
+    // for(int i = 0; i < n; i++) {
+    //     printf("%.2f ", array[i]);
+    // }
+    // printf("\n");
     sort(array, n, &comparision);
     printf("Comparision: %4d\n", comparision);
-    for(int i = 0; i < n; i++) {
-        printf("%.2f ", array[i]);
-    }
-    printf("\n");
+    // for(int i = 0; i < n; i++) {
+    //     printf("%.2f ", array[i]);
+    // }
+    // printf("\n");
     return 0;
 }
