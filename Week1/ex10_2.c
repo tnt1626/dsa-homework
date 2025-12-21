@@ -79,7 +79,7 @@ int main() {
 
     // Nhập chuỗi chính
     fgets(str, N, stdin);
-    str[strcspn(str, "\n")] = '\0'; // xóa '\n' ở cuối
+    str[strlen(str) - 1] = '\0'; // xóa '\n' ở cuối
 
     // Nhập số lượng chuỗi con cần xóa
     scanf("%d", &k);
@@ -88,7 +88,7 @@ int main() {
     // Nhập danh sách chuỗi con
     for (int i = 0; i < k; i++) {
         fgets(subStrs[i], M, stdin);
-        subStrs[i][strcspn(subStrs[i], "\n")] = '\0'; // xóa '\n'
+        subStrs[i][strlen(subStrs[i])] = '\0'; // xóa '\n'
     }
 
     // Gọi hàm xóa "mã độc"
@@ -98,3 +98,22 @@ int main() {
     printf("%s\n", str);
     return 0;
 }
+
+
+// gdfjhhghjhgdgsfjhhag
+// 1
+// hhg
+// gdfjhhghjhgdgsfjhhag
+
+// hdsa2023u872hdsa2023hs726ctdlctdlgfd7w7sgd89a7dsa76s82ctdl2023j92jcdt2
+// 2
+// ctdl
+// dsa2023
+// hdsa2023u872hdsa2023hs726ctdlctdlgfd7w7sgd89a7dsa76s82ctdl2023j92jcdt2
+
+// 89324y7w9ui3jbwediugd78uawihdioyqwt8eh1298ey89128uyeiugqwhbdoijwq89dhawuidhn98qwdj9832897jkwhdhsa                                                            
+// 3              
+// hvthao
+// ppnhung
+// phlam
+// 89324y7w9ui3jbwediugd78uawihdioyqwt8eh1298ey89128uyeiugqwhbdoijwq89dhawuidhn98qwdj9832897jkwhdhsa

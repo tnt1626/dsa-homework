@@ -60,7 +60,7 @@ int main() {
 
     // Nhập chuỗi chính (có thể chứa khoảng trắng)
     fgets(str, N, stdin);
-    str[strcspn(str, "\n")] = '\0'; // xóa ký tự '\n' ở cuối chuỗi
+    str[strlen(str) - 1] = '\0'; // xóa ký tự '\n' ở cuối chuỗi
 
     // Nhập số lượng chuỗi con
     scanf("%d", &k);
@@ -69,7 +69,7 @@ int main() {
     // Nhập k chuỗi con
     for (int i = 0; i < k; i++) {
         fgets(subStrs[i], M, stdin);
-        subStrs[i][strcspn(subStrs[i], "\n")] = '\0'; // xóa '\n' ở cuối mỗi chuỗi
+        subStrs[i][strlen(subStrs[i]) - 1] = '\0'; // xóa '\n' ở cuối mỗi chuỗi
     }
 
     // Mảng lưu kết quả vị trí xuất hiện
@@ -101,3 +101,24 @@ int main() {
 
     return 0;
 }
+
+// gdfjhhghjhgdgsfjhhag
+// 1
+// hhg
+// 1 hhg 4
+
+// hdsa2023u872hdsa2023hs726ctdlctdlgfd7w7sgd89a7dsa76s82ctdl2023j92jcdt2
+// 2
+// ctdl
+// dsa2023
+// 3 ctdl 25, 29, 54
+// 2 dsa2023 1, 13
+
+// 89324y7w9ui3jbwediugd78uawihdioyqwt8eh1298ey89128uyeiugqwhbdoijwq89dhawuidhn98qwdj9832897jkwhdhsa
+// 3
+// hvthao
+// ppnhung
+// phlam
+// 0 hvthao
+// 0 ppnhung
+// 0 phlam

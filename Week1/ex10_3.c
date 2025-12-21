@@ -81,7 +81,7 @@ int main() {
 
     // Đọc chuỗi chính
     fgets(str, N, stdin);
-    str[strcspn(str, "\n")] = '\0'; // xóa newline
+    str[strlen(str) - 1] = '\0'; // xóa newline
 
     // Đọc số lượng mã độc
     scanf("%d", &k);
@@ -90,7 +90,7 @@ int main() {
     // Đọc danh sách mã độc
     for (int i = 0; i < k; i++) {
         fgets(subStrs[i], M, stdin);
-        subStrs[i][strcspn(subStrs[i], "\n")] = '\0';
+        subStrs[i][strlen(subStrs[i]) - 1] = '\0';
     }
 
     // Xử lý: chèn ký tự liền kề sau mỗi ký tự trong mã độc
