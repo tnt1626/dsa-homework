@@ -25,7 +25,7 @@ void swap(int *a, int *b) {
 void bubbleSort(int array[], int n) {
     for(int i = 0; i  < n - 1; i++) {
         for(int j = 0; j < n - 1 - i; j++) {
-            if(array[j] < array[j + 1]) {
+            if(array[j] < array[j + 1]) { // (1)
                 swap(&array[j], &array[j + 1]);
             }
         }
@@ -36,7 +36,7 @@ void selectionSort(int array[], int n) {
     for(int i = 0; i < n - 1; i++) {
         int minIndex = i;
         for(int j = i + 1; j < n; j++) {
-            if(array[j] > array[minIndex]) {
+            if(array[j] > array[minIndex]) { // (2)
                 minIndex = j;
             }
         }
@@ -51,7 +51,7 @@ void insertionSort(int array[], int n) {
     while(i < n) {
         int key = array[i];
         int j = i;
-        while(j > 0 && key > array[j - 1]) {
+        while(j > 0 && key > array[j - 1]) { // (3)
             array[j] = array[j - 1];
             j--;
         }
@@ -78,3 +78,10 @@ int main() {
     printArray(array3, n);
     return 0;
 }
+
+// Array after bubble sort:   56   24   24   23   -3  -38  -42  -49  -53  -85
+// Array after selection sort:   98   95   56   44   37   34   10  -22  -44  -65
+// Array after inertion sort:   97   71   65   51    7    6    0  -61  -76  -94
+
+// Ở (1), (2), (3) nếu so sánh theo thuật toán gốc thì sẽ sắp xếp tăng dần,
+// khi đổi chiều so sánh thì sẽ thành sắp xếp giảm dần
