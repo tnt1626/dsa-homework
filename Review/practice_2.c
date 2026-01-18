@@ -2,6 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Cho một cây nhị phân tìm kiếm mà tất cả các nút đều là các số nguyên dương không trùng nhau.
+
+// Viết chương trình C cài đặt một cây nhị phân tìm kiếm có 10 nút mà dữ liệu của chúng được lấy ngẫu nhiên trong khoảng (0;100).
+
+// Chương trình thực hiện thí nghiệm trên 1000 cây sinh dữ liệu ngẫu nhiên và tính trung bình số nút lá mà mỗi cây có thể có.
+
+// Lưu ý:
+
+// - Mỗi khi kết thúc một vòng lặp, trước khi sinh cây mới thì phải xoá cây cũ.
+
+// - Ghi kết quả ở cuối bài code.
+
 struct Node {
     int data;
     struct Node *left;

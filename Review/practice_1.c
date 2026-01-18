@@ -3,6 +3,14 @@
 #include <math.h>
 #define EPSILON 1e-6
 
+// Cho một danh sách liên kết points mà mỗi nút chứa một điểm trong không gian toạ độ Descartes (Oxyz) . 
+// Mỗi điểm có toạ độ (x;y;z) với x,y,z là các số thực.
+
+// Cho mặt phẳng (P) có phương trình a*x + b*y + c*z + d = 0 với a,b,c,d là các số thực và a,b,c không đồng thời bằng 0.
+
+// Hàm distance(LinkedList *points, Plane P) có chức năng tính khoảng cách từ điểm points 
+// đến mặt phẳng P với kết quả là số thực dương. Nếu điểm thuộc mặt phẳng thì khoảng cách là 0.
+
 struct Node {
     double x;
     double y;
